@@ -1,0 +1,8 @@
+/*.root{
+    -fx-background-image: URL ("/images/Welcome.png");
+}*/
+
+.Button{
+    -fx-background-color: black;
+    -fx-font-color: white;
+}

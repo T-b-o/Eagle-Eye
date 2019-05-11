@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="jfoenix-8.0.8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/jfoenix-8.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/charm-glisten-4.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/AI/sqlite-jdbc-3.21.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/javafx-sdk-11.0.2/lib/javafx-swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/javafx-sdk-11.0.2/lib/javafx.base.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/javafx-sdk-11.0.2/lib/javafx.controls.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/javafx-sdk-11.0.2/lib/javafx.fxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/javafx-sdk-11.0.2/lib/javafx.graphics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/javafx-sdk-11.0.2/lib/javafx.media.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/javafx-sdk-11.0.2/lib/javafx.swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/javafx-sdk-11.0.2/lib/javafx.web.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/mylibraries/javacv.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/mylibraries/opencv-341.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../JavaLibraries/mylibraries/opencv-341.jar!/" />
+    </SOURCES>
+  </library>
+</component>
