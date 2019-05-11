@@ -14,7 +14,7 @@ public class EagleEyeMainController extends Application {
     }
 
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/EagleEyeDatabase/DBMS.fxml"));
+        Parent root = FXMLLoader.load(this.getClass().getResource("/EagleEyeAdmin/MainScreen.fxml"));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
         primaryStage.setOnCloseRequest(event -> System.exit(0));

@@ -12,8 +12,11 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.ResourceBundle;
+
+import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
@@ -38,8 +41,13 @@ import javax.sound.sampled.TargetDataLine;
 import javax.sound.sampled.AudioFileFormat.Type;
 import javax.sound.sampled.AudioFormat.Encoding;
 import javax.sound.sampled.DataLine.Info;
+import EagleEyeAdmin.SideMenuController;
 
-public class MainScreenController implements Initializable {
+public class MainScreenController implements Initializable, ColorChangeCallback {
+
+    @FXML
+    public static VBox vbxStage;
+
     @FXML
     private JFXDrawer drwLeftDrawer;
     @FXML
@@ -95,6 +103,8 @@ public class MainScreenController implements Initializable {
     @FXML
     private Color x41;
 
+    private AnchorPane root;
+
     public MainScreenController() {
     }
 
@@ -133,11 +143,46 @@ public class MainScreenController implements Initializable {
     void txtSpeechEventHandler(InputMethodEvent event) {
     }
 
+    private ColorChangeCallback callback;
+
+
+    public void setCallback(ColorChangeCallback callback){
+        this.callback = callback;
+    }
+
+
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.radOff.selectedProperty().setValue(true);
         this.btnSpeaker.setText("Speaker-Off");
         this.getDateTime();
         this.dtpSelectDate.setValue(LocalDate.now());
+
+        /* Load a side menu */
+
+        try {
+            FXMLLoader ld = new FXMLLoader(getClass().getResource("/EagleEyeAdmin/MainSideMenu.fxml"));
+            SideMenuController.vbxSideMenu = ld.load();
+            SideMenuController smc = ld.getController();
+            //smc.setCallback(this);
+            drwLeftDrawer.setSidePane(SideMenuController.vbxSideMenu);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /* Hamburger Control */
+        HamburgerBackArrowBasicTransition trans = new HamburgerBackArrowBasicTransition(burgerLeftDrawer);
+        trans.setRate(-1);
+        burgerLeftDrawer.addEventHandler(MouseEvent.MOUSE_PRESSED, e ->{
+            trans.setRate(trans.getRate() * -1);
+            trans.play();
+
+            if(drwLeftDrawer.isOpened()){
+                drwLeftDrawer.close();
+            }else{
+                drwLeftDrawer.open();
+            }
+        });
+
     }
 
     private void recordAndPlay() {
@@ -211,5 +256,10 @@ public class MainScreenController implements Initializable {
 
     public void getSelectedDate() {
         this.dtpSelectDate.setValue(this.dtpSelectDate.getValue());
+    }
+
+    @Override
+    public void updateColor(String newColor) {
+        root.setStyle("-fx-background-color:" + newColor);
     }
 }

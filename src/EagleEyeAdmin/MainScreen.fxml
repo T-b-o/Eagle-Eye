@@ -28,7 +28,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="928.0" style="-fx-background-color: black;" stylesheets="@../StyleSheet/StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EagleEyeAdmin.MainScreenController">
+<VBox prefHeight="600.0" prefWidth="976.0" style="-fx-background-color: black;" stylesheets="@../StyleSheet/StyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EagleEyeAdmin.MainScreenController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -69,40 +69,37 @@
         </Menu>
       </menus>
     </MenuBar>
-    <SplitPane dividerPositions="0.26457883369330454, 0.7278617710583153" focusTraversable="true" VBox.vgrow="ALWAYS">
+    <SplitPane dividerPositions="0.004106776180698152, 0.2946611909650924, 0.7412731006160165" focusTraversable="true" VBox.vgrow="ALWAYS">
       <items>
+            <JFXDrawer fx:id="drwLeftDrawer" prefHeight="549.0" prefWidth="185.0" />
         <AnchorPane>
           <children>
-                  <JFXDrawer fx:id="drwLeftDrawer">
+                  <VBox fx:id="vbLeftDrawer" prefHeight="533.0" prefWidth="241.0">
                      <children>
-                        <VBox fx:id="vbLeftDrawer" prefHeight="533.0" prefWidth="241.0">
+                        <AnchorPane minWidth="-Infinity" prefHeight="533.0" prefWidth="257.0">
                            <children>
-                              <AnchorPane minWidth="-Infinity" prefHeight="533.0" prefWidth="241.0">
-                                 <children>
-                                    <Button fx:id="btnSpeaker" layoutX="3.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnSpeakerEventHandler" prefHeight="42.0" prefWidth="76.0" styleClass="Button" stylesheets="@../StyleSheet/StyleSheet.css" text="Speaker" />
-                                    <AnchorPane layoutX="6.0" prefHeight="83.0" prefWidth="241.0">
-                                       <children>
-                                          <JFXHamburger fx:id="burgerLeftDrawer" layoutX="14.0" layoutY="51.0" onMouseClicked="#burgerLeftEventHandler" />
-                                    <Label alignment="CENTER" layoutX="13.0" layoutY="21.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Master" textAlignment="CENTER" wrapText="false">
-                                      <font>
-                                        <Font size="18.0" fx:id="x1" />
-                                      </font>
-                                      <textFill>
-                                        <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
-                                      </textFill>
-                                    </Label>
-                                       </children>
-                                    </AnchorPane>
-                                    <RadioButton fx:id="radOn" layoutX="90.0" layoutY="94.0" mnemonicParsing="false" text="On" />
-                                    <RadioButton fx:id="radOff" layoutX="90.0" layoutY="118.0" mnemonicParsing="false" text="Off" />
-                                    <ListView fx:id="lstRecordings" layoutX="5.0" layoutY="233.0" onMouseClicked="#lstRecordEventHandler" prefHeight="294.0" prefWidth="232.0" />
-                                    <Label layoutX="14.0" layoutY="209.0" text="Voice Records" />
+                              <Button fx:id="btnSpeaker" layoutX="91.0" layoutY="83.0" mnemonicParsing="false" onAction="#btnSpeakerEventHandler" prefHeight="42.0" prefWidth="76.0" styleClass="Button" stylesheets="@../StyleSheet/StyleSheet.css" text="Speaker" />
+                              <AnchorPane layoutX="6.0" prefHeight="83.0" prefWidth="241.0">
+                                     <children>
+                                    <JFXHamburger fx:id="burgerLeftDrawer" layoutX="14.0" layoutY="51.0" onMouseClicked="#burgerLeftEventHandler" />
+                              <Label alignment="CENTER" layoutX="13.0" layoutY="21.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Master" textAlignment="CENTER" wrapText="false">
+                                <font>
+                                  <Font size="18.0" fx:id="x1" />
+                                </font>
+                                <textFill>
+                                  <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                                </textFill>
+                              </Label>
                                  </children>
                               </AnchorPane>
+                              <RadioButton fx:id="radOn" layoutX="178.0" layoutY="83.0" mnemonicParsing="false" text="On" />
+                              <RadioButton fx:id="radOff" layoutX="178.0" layoutY="107.0" mnemonicParsing="false" text="Off" />
+                              <ListView fx:id="lstRecordings" layoutX="13.0" layoutY="222.0" onMouseClicked="#lstRecordEventHandler" prefHeight="294.0" prefWidth="232.0" />
+                              <Label layoutX="9.0" layoutY="200.0" text="Voice Records" />
                            </children>
-                        </VBox>
+                        </AnchorPane>
                      </children>
-                  </JFXDrawer>
+                  </VBox>
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">

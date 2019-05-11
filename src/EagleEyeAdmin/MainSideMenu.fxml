@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbxSideMenu" opacity="0.95" prefHeight="420.0" prefWidth="108.0"
+      style="-fx-background-color: #000000; -fx-background-radius: 0.5em;"
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="EagleEyeAdmin.SideMenuController">
+   <children>
+      <AnchorPane prefHeight="412.0" prefWidth="94.0">
+         <children>
+            <Button fx:id="btnSetings" layoutX="10.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnSetingsEventHandler" prefHeight="44.0" prefWidth="88.0" text="Setings" textAlignment="CENTER" />
+            <Button fx:id="btnWebcam" layoutX="10.0" layoutY="58.0" mnemonicParsing="false" onAction="#btnWebcamEventHandler" prefHeight="44.0" prefWidth="88.0" text="Webcam" />
+            <Button fx:id="btnDatabase" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#btnDatabaseEventHandler" prefHeight="44.0" prefWidth="88.0" text="Database" textAlignment="CENTER" />
+            <Button layoutX="10.0" layoutY="161.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="88.0" text="Button" />
+            <Button layoutX="10.0" layoutY="213.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="88.0" text="Button" />
+            <Button layoutX="10.0" layoutY="264.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="88.0" text="Button" />
+            <Button layoutX="10.0" layoutY="316.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="88.0" text="Button" />
+            <Button fx:id="btnLogout" layoutX="10.0" layoutY="367.0" mnemonicParsing="false" onAction="#btnLogoutEventHandler" prefHeight="44.0" prefWidth="88.0" text="Log Out" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
