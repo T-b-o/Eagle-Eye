@@ -28,7 +28,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="976.0" style="-fx-background-color: black;" stylesheets="@../StyleSheet/StyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EagleEyeAdmin.MainScreenController">
+<VBox prefHeight="600.0" prefWidth="1094.0" style="-fx-background-color: black;" stylesheets="@../StyleSheet/StyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EagleEyeAdmin.MainScreenController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -69,9 +69,13 @@
         </Menu>
       </menus>
     </MenuBar>
-    <SplitPane dividerPositions="0.004106776180698152, 0.2946611909650924, 0.7412731006160165" focusTraversable="true" VBox.vgrow="ALWAYS">
+    <SplitPane dividerPositions="0.09615384615384616, 0.33882783882783885, 0.7271062271062271" focusTraversable="true" VBox.vgrow="ALWAYS">
       <items>
-            <JFXDrawer fx:id="drwLeftDrawer" prefHeight="549.0" prefWidth="185.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXDrawer fx:id="drwLeftDrawer" alignment="CENTER_LEFT" layoutY="86.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="101.0" style="-fx-background-radius: 0.5em;" />
+               </children>
+            </AnchorPane>
         <AnchorPane>
           <children>
                   <VBox fx:id="vbLeftDrawer" prefHeight="533.0" prefWidth="241.0">
@@ -161,13 +165,13 @@
          <children>
             <Pane prefHeight="15.0" prefWidth="681.0" HBox.hgrow="ALWAYS">
                <children>
-                  <DatePicker fx:id="dtpSelectDate" layoutX="806.0" layoutY="-5.0" prefHeight="26.0" prefWidth="120.0" />
-                  <Label fx:id="lblCurrentTime" contentDisplay="CENTER" layoutX="713.0" layoutY="-7.0" maxWidth="-1.0" prefHeight="25.0" prefWidth="101.0" text="Current Time" textAlignment="RIGHT">
+                  <DatePicker fx:id="dtpSelectDate" layoutX="968.0" layoutY="-6.0" prefHeight="26.0" prefWidth="120.0" />
+                  <Label fx:id="lblCurrentTime" contentDisplay="CENTER" layoutX="875.0" layoutY="-8.0" maxWidth="-1.0" prefHeight="25.0" prefWidth="101.0" text="Current Time" textAlignment="RIGHT">
                      <font>
                         <Font name="Loma Bold" size="15.0" fx:id="x43" />
                      </font>
                      <textFill>
-                        <LinearGradient endX="0.6490384615384615" endY="0.9759615384615385" startX="0.3125" startY="0.6298076923076923">
+                        <LinearGradient endX="0.6201923076923076" endY="0.6490384615384616" startX="0.610576923076923" startY="0.298076923076923">
                            <stops>
                               <Stop color="#7e8f51" />
                               <Stop color="WHITE" offset="1.0" />
@@ -181,7 +185,7 @@
                         <Font name="Loma Bold" size="15.0" fx:id="x31" />
                      </font>
                      <textFill>
-                        <LinearGradient endX="0.6490384615384615" endY="0.9759615384615385" startX="0.3125" startY="0.6298076923076923">
+                        <LinearGradient endX="0.6201923076923076" endY="0.6490384615384616" startX="0.610576923076923" startY="0.298076923076923">
                            <stops>
                               <Stop color="#7e8f51" />
                               <Stop color="WHITE" offset="1.0" />
