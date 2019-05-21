@@ -48,20 +48,26 @@ public class SideMenuController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
     }
 
     @FXML
     void btnLogoutEventHandler(ActionEvent event) {
+        MainScreenController ms = new MainScreenController();
         try {
             Parent sysMan = FXMLLoader.load(getClass().getResource("/EagleEyeAdmin/login.fxml"));
             Stage stage = new Stage();
             stage.setScene(new Scene(sysMan));
+
             stage.show();
 
-            MainScreenController.vbxStage.getScene().getWindow().hide();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+        MainScreenController.vbxStage.getScene().getWindow().hide();
     }
 
     @FXML

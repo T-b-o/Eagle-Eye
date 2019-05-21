@@ -13,7 +13,7 @@ public class EagleEyeDbConnection {
 
     static Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("org.sqlite.JDBC");
-        conn = DriverManager.getConnection("jdbc:sqlite:/home/tebohomatjele/Documents/Eagle Eye/src/EagleEyeDatabase/EagleEye");
+        conn = DriverManager.getConnection("jdbc:sqlite:/home/tebohomatjele/Documents/Project/Eagle-Eye/src/EagleEyeDatabase/EagleEye");
         return conn;
     }
 }

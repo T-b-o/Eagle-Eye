@@ -3,6 +3,8 @@ package EagleEyeMaster;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import EagleEyeAdmin.AdminController;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -53,11 +55,7 @@ public class SplashController implements Initializable {
             fadeIn.setOnFinished(e -> fadeOut.play());
             fadeOut.setOnFinished((e) -> {
                 try {
-                    Parent mainScreen = FXMLLoader.load(this.getClass().getResource("/EagleEyeAdmin/login.fxml"));
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(mainScreen));
-                    stage.initStyle(StageStyle.UNDECORATED);
-                    stage.show();
+                    new AdminController().loadLogin();
                     this.anchWelcomeScreen.getScene().getWindow().hide();
                 } catch (IOException var4) {
                     var4.printStackTrace();

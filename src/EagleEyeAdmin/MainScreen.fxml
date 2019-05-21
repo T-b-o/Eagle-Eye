@@ -28,7 +28,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="1094.0" style="-fx-background-color: black;" stylesheets="@../StyleSheet/StyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EagleEyeAdmin.MainScreenController">
+<VBox prefHeight="600.0" prefWidth="1094.0" style="-fx-background-color: black;" stylesheets="@../StyleSheet/StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EagleEyeAdmin.MainScreenController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -150,7 +150,7 @@
                   <Label fx:id="lblDate" layoutX="117.0" layoutY="292.0" text="01/01/2019" />
                   <HBox layoutX="1.0" layoutY="323.0" prefHeight="225.0" prefWidth="246.0">
                      <children>
-                        <ImageView fx:id="imgMapLocation" fitHeight="225.0" fitWidth="247.0" onMouseClicked="#imgMapEventHandler" pickOnBounds="true">
+                        <ImageView fx:id="imgMapLocation" fitHeight="225.0" fitWidth="296.0" onMouseClicked="#imgMapEventHandler" pickOnBounds="true">
                            <image>
                               <Image url="@../MediaFiles/images/map.png" />
                            </image>

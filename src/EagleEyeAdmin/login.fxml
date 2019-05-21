@@ -13,7 +13,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchLoginScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.95" prefHeight="440.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EagleEyeAdmin.AdminController">
+<AnchorPane fx:id="anchLoginScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.95" prefHeight="440.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EagleEyeAdmin.AdminController">
    <children>
       <ImageView fitHeight="483.0" fitWidth="782.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
@@ -63,7 +63,7 @@
                               <Image url="@../MediaFiles/images/password.png" />
                            </image>
                         </ImageView>
-                        <Hyperlink fx:id="lnkSignUp" layoutX="262.0" layoutY="197.0" prefHeight="37.0" prefWidth="65.0" text="SignUp" textAlignment="CENTER">
+                        <Hyperlink fx:id="lnkSignUp" layoutX="262.0" layoutY="197.0" onAction="#lnkSignUpEvent" prefHeight="37.0" prefWidth="65.0" text="SignUp" textAlignment="CENTER">
                            <font>
                               <Font name="Loma Bold" size="15.0" />
                            </font>

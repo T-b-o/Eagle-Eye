@@ -12,8 +12,11 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class AdminController {
+
+
     @FXML
     private AnchorPane anchLoginScreen;
     @FXML
@@ -24,6 +27,15 @@ public class AdminController {
     private Label lblClose;
 
     public AdminController() {
+    }
+
+    @FXML
+    void lnkSignUpEvent(ActionEvent event){
+        try {
+            new RegisterController().openRegister();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -39,5 +51,13 @@ public class AdminController {
     @FXML
     void lblCloseEventHandler(MouseEvent event) {
         System.exit(0);
+    }
+
+    public void loadLogin() throws IOException{
+        Parent mainScreen = FXMLLoader.load(this.getClass().getResource("/EagleEyeAdmin/login.fxml"));
+        Stage stage = new Stage();
+        stage.setScene(new Scene(mainScreen));
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.show();
     }
 }

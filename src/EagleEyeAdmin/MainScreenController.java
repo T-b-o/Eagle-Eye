@@ -18,6 +18,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -42,6 +44,7 @@ import javax.sound.sampled.AudioFileFormat.Type;
 import javax.sound.sampled.AudioFormat.Encoding;
 import javax.sound.sampled.DataLine.Info;
 import EagleEyeAdmin.SideMenuController;
+import javafx.stage.Stage;
 
 public class MainScreenController implements Initializable, ColorChangeCallback {
 
@@ -132,7 +135,17 @@ public class MainScreenController implements Initializable, ColorChangeCallback 
     }
 
     @FXML
-    void imgMapEventHandler(MouseEvent event) {
+    void imgMapEventHandler(MouseEvent event) throws IOException {
+        Parent webMap = null;
+        try {
+            webMap = FXMLLoader.load(getClass().getResource("/EagleEyeMap/EagleMapView.fxml"));
+            Stage mapStage = new Stage();
+            mapStage.setTitle("Eagle Eye Map");
+            mapStage.setScene(new Scene(webMap));
+            mapStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

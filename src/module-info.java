@@ -9,6 +9,7 @@ module Eagle.Eye {
     requires javafx.swt;
     requires javafx.media;
     requires javafx.swing;
+    requires javafx.web;
     requires java.sql;
     requires jfoenix;
     requires charm.glisten;
@@ -17,4 +18,5 @@ module Eagle.Eye {
     opens EagleEyeMaster;
     opens EagleEyeAdmin;
     opens EagleEyeDatabase;
+    opens EagleEyeMap;
 }
