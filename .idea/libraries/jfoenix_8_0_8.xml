@@ -1,23 +1,24 @@
 <component name="libraryTable">
   <library name="jfoenix-8.0.8">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/AI/charm-glisten-4.4.1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/jfoenix-8.0.8.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/mylibraries/opencv-341.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/mylibraries/javacv.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/AI/sqlite-jdbc-3.21.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx-swt.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.base.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.controls.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.fxml.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.graphics.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.media.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.swing.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.web.jar!/" />
+      <root url="jar://E:/JavaLibraries/AI/charm-glisten-4.4.1.jar!/" />
+      <root url="jar://E:/JavaLibraries/jfoenix-8.0.8.jar!/" />
+      <root url="jar://E:/JavaLibraries/mylibraries/opencv-341.jar!/" />
+      <root url="jar://E:/JavaLibraries/mylibraries/javacv.jar!/" />
+      <root url="jar://E:/JavaLibraries/AI/sqlite-jdbc-3.21.0.jar!/" />
+      <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx-swt.jar!/" />
+      <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.base.jar!/" />
+      <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.controls.jar!/" />
+      <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.fxml.jar!/" />
+      <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.graphics.jar!/" />
+      <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.media.jar!/" />
+      <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.swing.jar!/" />
+      <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.web.jar!/" />
+      <root url="jar://E:/JavaLibraries/AI/sqljdbc_7.2/enu/mssql-jdbc-7.2.2.jre11.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../JavaLibraries/mylibraries/opencv-341.jar!/" />
+      <root url="jar://E:/JavaLibraries/mylibraries/opencv-341.jar!/" />
     </SOURCES>
   </library>
 </component>

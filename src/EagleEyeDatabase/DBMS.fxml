@@ -11,7 +11,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EagleEyeDatabase.DbmsController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="EagleEyeDatabase.DbmsController">
   <children>
     <MenuBar prefHeight="29.0" prefWidth="560.0" VBox.vgrow="NEVER">
       <menus>
@@ -69,9 +70,9 @@
                      <children>
                         <TableView fx:id="tblRecords" layoutX="1.0" prefHeight="369.0" prefWidth="429.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columns>
-                            <TableColumn fx:id="colID" prefWidth="75.0" text="IDentity" />
-                            <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
-                              <TableColumn fx:id="colPassword" prefWidth="75.0" text="Password" />
+                            <TableColumn fx:id="colID" prefWidth="75.0" text="Admin ID" />
+                            <TableColumn fx:id="colName" prefWidth="75.0" text="First Name" />
+                              <TableColumn fx:id="colPassword" prefWidth="75.0" text="Last Name" />
                           </columns>
                         </TableView>
                      </children>

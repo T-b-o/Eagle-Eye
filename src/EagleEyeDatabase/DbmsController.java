@@ -32,10 +32,11 @@ public class DbmsController implements Initializable {
         try {
             Connection con = EagleEyeDbConnection.getConnection();
             if (con.isValid(1)) {
-                ResultSet res = con.createStatement().executeQuery("select Admin_Id, Admin_UserName, Admin_Password from Administrator");
-
+                /*ResultSet res = con.createStatement().executeQuery("select Admin_Id, Admin_UserName, Admin_Password from Administrator");*/
+                ResultSet res = con.createStatement().executeQuery("select adminID, adminFirstName, adminLastName from Administrator");
                 while(res.next()) {
-                    this.obList.add(new ModelTable(res.getInt("Admin_Id"), res.getString("Admin_UserName"), res.getString("Admin_Password")));
+                    /*this.obList.add(new ModelTable(res.getInt("Admin_Id"), res.getString("Admin_UserName"), res.getString("Admin_Password")));*/
+                    this.obList.add(new ModelTable(res.getInt("adminID"), res.getString("adminFirstName"), res.getString("adminLastName")));
                 }
             }
 
@@ -46,9 +47,9 @@ public class DbmsController implements Initializable {
             var6.printStackTrace();
         }
 
-        this.colID.setCellValueFactory(new PropertyValueFactory("id"));
-        this.colName.setCellValueFactory(new PropertyValueFactory("name"));
-        this.colPassword.setCellValueFactory(new PropertyValueFactory("password"));
+        this.colID.setCellValueFactory(new PropertyValueFactory<>("id"));
+        this.colName.setCellValueFactory(new PropertyValueFactory<>("FirstName"));
+        this.colPassword.setCellValueFactory(new PropertyValueFactory<>("LastName"));
         this.tblRecords.setItems(this.obList);
     }
 }
