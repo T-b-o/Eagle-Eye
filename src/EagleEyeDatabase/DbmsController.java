@@ -18,38 +18,65 @@ public class DbmsController implements Initializable {
     private TableView<ModelTable> tblRecords;
     @FXML
     private TableColumn<ModelTable, Integer> colID;
+
     @FXML
-    private TableColumn<ModelTable, String> colName;
+    private TableColumn<ModelTable, String> colFirstName;
+
+    @FXML
+    private TableColumn<ModelTable, String> colLastName;
+
     @FXML
     private TableColumn<ModelTable, String> colPassword;
+
+    @FXML
+    private TableColumn<ModelTable, String> colUserName;
+
+    @FXML
+    private TableColumn<ModelTable, String> colEmail;
+
+    @FXML
+    private TableColumn<ModelTable, Integer> colPersonId;
+
+
+
 
     private ObservableList<ModelTable> obList = FXCollections.observableArrayList();
 
     public DbmsController() {
     }
 
+    void displayRecords() throws ClassNotFoundException, SQLException{
+        Connection con = EagleEyeDbConnection.getConnection();
+        if (con.isValid(1)) {
+            /*ResultSet res = con.createStatement().executeQuery("select Admin_Id, Admin_UserName, Admin_Password from Administrator");*/
+            ResultSet res = con.createStatement().executeQuery("select adminID, adminFirstName, adminLastName, " +
+                    "adminEmail, adminUserName, adminPassword, personID from Administrator");
+            while(res.next()) {
+                /*this.obList.add(new ModelTable(res.getInt("Admin_Id"), res.getString("Admin_UserName"), res.getString("Admin_Password")));*/
+                this.obList.add(new ModelTable(res.getInt("adminID"), res.getString("adminFirstName"), res.getString("adminLastName"),
+                        res.getString("adminEmail"), res.getString("adminUserName"), res.getString("adminPassword"), res.getInt( "personID")));
+            }
+        }
+
+        con.close();
+    }
+
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            Connection con = EagleEyeDbConnection.getConnection();
-            if (con.isValid(1)) {
-                /*ResultSet res = con.createStatement().executeQuery("select Admin_Id, Admin_UserName, Admin_Password from Administrator");*/
-                ResultSet res = con.createStatement().executeQuery("select adminID, adminFirstName, adminLastName from Administrator");
-                while(res.next()) {
-                    /*this.obList.add(new ModelTable(res.getInt("Admin_Id"), res.getString("Admin_UserName"), res.getString("Admin_Password")));*/
-                    this.obList.add(new ModelTable(res.getInt("adminID"), res.getString("adminFirstName"), res.getString("adminLastName")));
-                }
-            }
-
-            con.close();
-        } catch (ClassNotFoundException var5) {
-            var5.printStackTrace();
-        } catch (SQLException var6) {
-            var6.printStackTrace();
+            displayRecords();
+        }catch (SQLException ex) {
+            ex.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
 
         this.colID.setCellValueFactory(new PropertyValueFactory<>("id"));
-        this.colName.setCellValueFactory(new PropertyValueFactory<>("FirstName"));
-        this.colPassword.setCellValueFactory(new PropertyValueFactory<>("LastName"));
+        this.colFirstName.setCellValueFactory(new PropertyValueFactory<>("FirstName"));
+        this.colLastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
+        this.colEmail.setCellValueFactory(new PropertyValueFactory<>("Email"));
+        this.colUserName.setCellValueFactory(new PropertyValueFactory<>("UserName"));
+        this.colPassword.setCellValueFactory(new PropertyValueFactory<>("Password"));
+        this.colPersonId.setCellValueFactory(new PropertyValueFactory<>("PersonId"));
         this.tblRecords.setItems(this.obList);
     }
 }

@@ -35,7 +35,7 @@ public class EagleMapController implements Initializable {
         /*engine.load("https://www.google.com");*/
         /*engine.load(getClass().getResource("/EagleEyeMap/MapLocation.html").toString());*/
         final URL urlEagleMap = getClass().getResource("/EagleEyeMap/MapLocation.html");
-        engine.load(urlEagleMap.toExternalForm());
+        engine.load(urlEagleMap.toString());
         //anchWebMap.getChildren().add(anchEagleMap);
 
     }

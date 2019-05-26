@@ -1,6 +1,15 @@
 package EagleEyeAdmin;
 
 import java.io.IOException;
+import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+
+import EagleEyeDatabase.EagleEyeDbConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -26,7 +36,32 @@ public class AdminController {
     @FXML
     private Label lblClose;
 
+    @FXML
+    private TextField txtUserName;
+
+    @FXML
+    private TextField txtPassword;
+
+    /* Derived Data Types */
+    private String userName, Password;
+
     public AdminController() {
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        this.Password = password;
     }
 
     @FXML
@@ -39,13 +74,12 @@ public class AdminController {
     }
 
     @FXML
-    void btnLoginEventHandler(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/EagleEyeAdmin/MainScreen.fxml"));
-        Stage mainStage = new Stage();
-        mainStage.setScene(new Scene(root));
-        mainStage.setTitle("Eagle Eye");
-        mainStage.show();
-        this.anchLoginScreen.getScene().getWindow().hide();
+    void btnLoginEventHandler(ActionEvent event) {
+        try {
+            login();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -60,4 +94,50 @@ public class AdminController {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
+
+    private void login() throws IOException{
+        Connection conn = null;
+        setUserName(txtUserName.getText());
+        setPassword(txtPassword.getText());
+
+        //SimpleDateFormat sdf = new SimpleDateFormat("HH.mm");
+
+        try {
+            conn = EagleEyeDbConnection.getConnection();
+            String loginQuery = "select adminUserName, adminPassword from Administrator " +
+                    "where adminUserName = ? and adminPassword = ? ";
+            /*Statement queryStatement = conn.createStatement();*/
+            PreparedStatement prepStatement = conn.prepareStatement(loginQuery);
+            prepStatement.setString(1, getUserName());
+            prepStatement.setString(2, getPassword());
+            ResultSet loginResult = prepStatement.executeQuery();
+            if(loginResult.next() && !getUserName().equals("") && !getPassword().equals("")){
+                System.out.println("Login successful!!!");
+
+                /* Get the current user login date and time */
+                /*String userLogInfo = "insert into Login(adminID, logTime, logDate)" +
+                        "values((select Administrator.adminID from Administrator where Administrator.adminUserName = '" + getUserName() + "')'" +
+                        sdf.parse(LocalTime.now().format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT))) +
+                        "', '" + LocalDate.now().format(DateTimeFormatter.ISO_DATE) + ")'";
+                conn.prepareStatement(userLogInfo).executeUpdate();*/
+                Parent root = FXMLLoader.load(this.getClass().getResource("/EagleEyeAdmin/MainScreen.fxml"));
+                Stage mainStage = new Stage();
+                mainStage.setScene(new Scene(root));
+                mainStage.setTitle("Eagle Eye");
+                mainStage.show();
+                this.anchLoginScreen.getScene().getWindow().hide();
+            }else{
+                System.out.println("Invalid username or password\n" + getUserName() + " : " + getPassword());
+            }
+            prepStatement.close();
+            conn.close();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }/* catch (ParseException e) {
+            e.printStackTrace();
+        }*/
+    }
+
 }

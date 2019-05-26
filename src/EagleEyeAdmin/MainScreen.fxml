@@ -28,7 +28,8 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="1094.0" style="-fx-background-color: black;" stylesheets="@../StyleSheet/StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EagleEyeAdmin.MainScreenController">
+<VBox prefHeight="600.0" prefWidth="1094.0" style="-fx-background-color: black;" stylesheets="@../StyleSheet/StyleSheet.css"
+      xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EagleEyeAdmin.MainScreenController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>

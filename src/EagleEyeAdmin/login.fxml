@@ -26,12 +26,12 @@
                <children>
                   <AnchorPane prefHeight="258.0" prefWidth="329.0">
                      <children>
-                        <TextField layoutX="36.0" layoutY="33.0" prefHeight="28.0" prefWidth="233.0" promptText="Username">
+                        <TextField fx:id="txtUserName" layoutX="36.0" layoutY="33.0" prefHeight="28.0" prefWidth="233.0" promptText="Username">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="36.0" layoutY="90.0" prefHeight="28.0" prefWidth="233.0" promptText="Password">
+                        <TextField fx:id="txtPassword" layoutX="36.0" layoutY="90.0" prefHeight="28.0" prefWidth="233.0" promptText="Password">
                            <font>
                               <Font size="14.0" />
                            </font>
