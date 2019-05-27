@@ -3,8 +3,6 @@
     <CLASSES>
       <root url="jar://E:/JavaLibraries/AI/charm-glisten-4.4.1.jar!/" />
       <root url="jar://E:/JavaLibraries/jfoenix-8.0.8.jar!/" />
-      <root url="jar://E:/JavaLibraries/mylibraries/opencv-341.jar!/" />
-      <root url="jar://E:/JavaLibraries/mylibraries/javacv.jar!/" />
       <root url="jar://E:/JavaLibraries/AI/sqlite-jdbc-3.21.0.jar!/" />
       <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx-swt.jar!/" />
       <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.base.jar!/" />
@@ -15,10 +13,15 @@
       <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.swing.jar!/" />
       <root url="jar://E:/JavaLibraries/AI/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.web.jar!/" />
       <root url="jar://E:/JavaLibraries/AI/sqljdbc_7.2/enu/mssql-jdbc-7.2.2.jre11.jar!/" />
+      <root url="jar://C:/opencv/build/java/opencv-410.jar!/" />
+      <root url="jar://C:/javacv-bin/javacpp.jar!/" />
+      <root url="jar://C:/javacv-bin/javacv.jar!/" />
+      <root url="jar://C:/javacv-cppjars/ffmpeg-2.1.1-windows-x86_64.jar!/" />
+      <root url="jar://C:/javacv-cppjars/opencv-2.4.8-windows-x86_64.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://E:/JavaLibraries/mylibraries/opencv-341.jar!/" />
+      <root url="jar://C:/opencv/build/java/opencv-410.jar!/" />
     </SOURCES>
   </library>
 </component>

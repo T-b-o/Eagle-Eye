@@ -34,10 +34,8 @@ public class EagleMapController implements Initializable {
     void btnLocationEvent(ActionEvent event) {
         /*engine.load("https://www.google.com");*/
         /*engine.load(getClass().getResource("/EagleEyeMap/MapLocation.html").toString());*/
-        final URL urlEagleMap = getClass().getResource("/EagleEyeMap/MapLocation.html");
-        engine.load(urlEagleMap.toString());
         //anchWebMap.getChildren().add(anchEagleMap);
-
+        displayMap();
     }
 
     @FXML
@@ -59,5 +57,10 @@ public class EagleMapController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         engine = anchEagleMap.getEngine();
+    }
+
+    private void displayMap(){
+        final URL urlEagleMap = getClass().getResource("/EagleEyeMap/MapLocation.html");
+        engine.load(urlEagleMap.toString());
     }
 }

@@ -1,0 +1,33 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Eagle Eye">
+    <output-path>$PROJECT_DIR$/out/artifacts/Eagle_Eye</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="EagleEyeMaster.EagleEyeMainController" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="exe" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Eagle_Eye.jar">
+        <element id="module-output" name="Eagle Eye" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/EagleEyeMaster/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="extracted-dir" path="E:/JavaLibraries/javafx-sdk-11.0.2/lib/javafx-swt.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="E:/JavaLibraries/javafx-sdk-11.0.2/lib/javafx.base.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="E:/JavaLibraries/javafx-sdk-11.0.2/lib/javafx.controls.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="E:/JavaLibraries/javafx-sdk-11.0.2/lib/javafx.fxml.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="E:/JavaLibraries/javafx-sdk-11.0.2/lib/javafx.graphics.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="E:/JavaLibraries/javafx-sdk-11.0.2/lib/javafx.media.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="E:/JavaLibraries/javafx-sdk-11.0.2/lib/javafx.swing.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="E:/JavaLibraries/javafx-sdk-11.0.2/lib/javafx.web.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="E:/JavaLibraries/jfoenix-8.0.8.jar" path-in-jar="/" />
+      </element>
+    </root>
+  </artifact>
+</component>

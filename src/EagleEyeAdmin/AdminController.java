@@ -75,6 +75,11 @@ public class AdminController {
 
     @FXML
     void btnLoginEventHandler(ActionEvent event) {
+        /*int count = 0;
+        if(getUserName().equals("") || getPassword().equals("")){
+            ++count;
+        }*/
+
         try {
             login();
         } catch (IOException e) {
@@ -96,7 +101,7 @@ public class AdminController {
     }
 
     private void login() throws IOException{
-        Connection conn = null;
+        Connection conn;
         setUserName(txtUserName.getText());
         setPassword(txtPassword.getText());
 

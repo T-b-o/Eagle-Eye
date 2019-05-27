@@ -7,9 +7,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.opencv.core.Core;
+import org.opencv.highgui.HighGui;
 
 public class EagleEyeMainController extends Application {
     static boolean isSplashLoaded = false;
+
+
+
 
     public EagleEyeMainController() {
     }
@@ -24,6 +29,7 @@ public class EagleEyeMainController extends Application {
     }
 
     public static void main(String[] args) {
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         launch(args);
     }
 }

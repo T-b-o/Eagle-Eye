@@ -17,6 +17,8 @@ module Eagle.Eye {
     requires java.sql;
     //requires jfxrt;
     //requires rt;
+    requires javacv;
+    requires opencv;
 
     requires com.microsoft.sqlserver.jdbc;
 

@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
-public class SplashController implements Initializable {
+public class    SplashController implements Initializable {
     @FXML
     private AnchorPane anchWelcomeScreen;
     @FXML

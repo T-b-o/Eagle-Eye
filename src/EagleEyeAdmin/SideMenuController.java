@@ -10,10 +10,25 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
+import com.googlecode.javacv.CanvasFrame;
+import org.opencv.core.Core;
+import org.opencv.highgui.*;
+import com.googlecode.javacv.cpp.opencv_core.IplImage;
+import com.googlecode.javacv.cpp.opencv_highgui;
+import com.googlecode.javacv.cpp.opencv_highgui.CvCapture;
+import java.awt.image.BufferedImage;
+import javax.swing.JOptionPane;
+import org.opencv.videoio.VideoCapture;
+
+
 public class SideMenuController {
+
+
 
     @FXML
     public static VBox vbxSideMenu;
@@ -77,6 +92,27 @@ public class SideMenuController {
 
     @FXML
     void btnWebcamEventHandler(ActionEvent event) {
+        Thread webCam = new Thread(() -> {
+            BufferedImage img;
+
+            CvCapture capture = opencv_highgui.cvCreateCameraCapture(0);
+
+            opencv_highgui.cvSetCaptureProperty(capture, opencv_highgui.CV_CAP_PROP_FRAME_HEIGHT, 720);
+            opencv_highgui.cvSetCaptureProperty(capture, opencv_highgui.CV_CAP_PROP_FRAME_WIDTH, 1280);
+
+            IplImage grabbedImage;
+            CanvasFrame frame = new CanvasFrame("CiTix MyWebcam");
+
+            if (frame.isVisible()) {
+                JOptionPane.showMessageDialog(null, "Connected");
+                while (frame.isVisible() && (grabbedImage = opencv_highgui.cvQueryFrame(capture)) != null) {
+                    frame.showImage(grabbedImage);
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "Not Connected");
+            }
+        });
+        webCam.start();
 
     }
 }
